@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo-Pro</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <h1>Task name</h1>
+                <input type="text" placeholder="Enter task name" id="nameTask" onclick="createElement">
+        </div>
+        <div class="createTask">
+            <h1>Subtask</h1>
+            <table>
+                <tr>
+                    <td>discription</td><td>time</td><td>button</td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td><input type="text" placeholder="New Task" id="newTask"></td>
+                    <td><input id="nTicks"></td>
+                    <td><button id="delTask">delete</button></td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td><input type="text" placeholder="Old Task" id="oldTask"></td>
+                    <td><input id="nTicks"></td>
+                    <td><button id="delTask">delete</button></td>
+                </tr>
+            </table>
+            <input type="submit" onclick="toLocal()" value="SAVE TASK IN LocalStorage" id="saveToLocal">
+            <input type="submit" onclick="newElement()" value="CREATE NEW TASK" id="addTask">
+        </div>
+        <!-- <div id="tick"></div>
+        <button onclick="startTimer()">start</button> -->
+        <div class="listTask">
+            <h1>Task list</h1>
+            <div id="list"></div>
+        </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
