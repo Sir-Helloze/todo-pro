@@ -21,9 +21,10 @@ function newElement(){
         if (object !=0 ){
             console.log(object);
             var out = '';
-            out +=`<div class="task"><ul><li><p>${object.name}</p><button class="load">load</button></li><ul><li><p>${object.discr} --- ${object.time} H </p></li></ul></ul></div>`;
+            out +=`<div class="task"><ul><li><p>${object.name}</p><button class="load" onclick="load()">load</button></li><ul><li><p>${object.discr} --- ${object.time} H </p></li></ul></ul></div>`;
             $('#list').html(out);
-            localStorage.setItem('save', document.getElementById('list').innerHTML);
+            localStorage.setItem('save1', document.getElementById('list').innerHTML);
+            
         }
     }
     else{
@@ -32,10 +33,13 @@ function newElement(){
     toSave()
 }
 function toSave(){
-    var save = localStorage.getItem('save');
+    var save = localStorage.getItem('save1');
     document.getElementById('list').innerHTML = save;
     
 }
 toSave()
+function load(){
+    
+}
 
     
