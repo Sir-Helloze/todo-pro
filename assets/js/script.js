@@ -39,7 +39,10 @@ function toSave(){
 }
 toSave()
 function load(){
-    
+    localStorage.getItem('todos', object);
+    var outSub = '';
+    out +=`<tr><td><input type="text" placeholder="Old Task" id="oldTask" value="${object.discr}"></td><td><input id="timeTask" value="${object.time}"></td><td><button id="delTask">delete</button></td></tr>`;
+    $('#subTask').html(outSub);
 }
 
     
